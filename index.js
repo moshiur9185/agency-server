@@ -21,7 +21,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 client.connect(err => {
   const serviceCollection = client.db("agency").collection("services");
   const projectsCollection = client.db("agency").collection("projects");
-  const projectsCollection = client.db("agency").collection("admin");
+  const adminCollection = client.db("agency").collection("admin");
     
   app.post("/addService", (req, res) => {
     const file = req.files.file;
